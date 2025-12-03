@@ -19,6 +19,7 @@ class Ex1_44_adam_MB(BaseExperiment):
         super().__init__(n_samples = n_samples, test_size = test_size, master_seed = master_seed)
 
     def train_one_lr(self, initial_lr, iterations = 600, verbose = True, print_every = 50):
+        self.initial_lr = initial_lr
         w = np.random.rand(self.X_train_standardized.shape[1])
         b = np.random.rand()
 
