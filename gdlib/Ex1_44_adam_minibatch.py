@@ -70,9 +70,9 @@ class Ex1_44_adam_MB(BaseExperiment):
                 w -= initial_lr * m_w_hat / (np.sqrt(v_w_hat) + epsilon)
                 b -= initial_lr * m_b_hat / (np.sqrt(v_b_hat) + epsilon)
 
-                w_history.append(w.copy())
-                b_history.append(b)
-                lr_history.append(initial_lr)
+            w_history.append(w.copy())
+            b_history.append(b)
+            lr_history.append(initial_lr)
                 
             y_pred_train = np.dot(self.X_train_standardized, w) + b
             error_train = self.y_train - y_pred_train
